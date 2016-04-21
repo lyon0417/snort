@@ -1,0 +1,2 @@
+alert tcp any any -> $HOME_NET 2000 (msg:"content relace test";sid:1000001;rev:001; content:"|20 20 20 20 20 20|"; replace:"|00 00 00 00 00 00|";classtype:policy-violation;)
+#alert icmp any any -> $HOME_NET any (msg:"ICMP test detected"; GID:1; sid:10000001; rev:001; classtype:icmp-event;)
